@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东注册</title>
+    <link rel="stylesheet" href="./css/JD注册.css">
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/verify.js"></script>
+    <link rel="stylesheet" href="./css/iconfont (2).css">
+</head>
+
+<body>
+    <div class="top">
+        <div class="topbox bx">
+            <div class="top-logo">
+                <a href="#"><img src="./img/JDlogo.png" alt=""></a>
+                <span class="top-span"></span>
+            </div>
+            <a class="top-a" href="#">
+                <span class="redmi"></span>
+                登录页面，调查问卷
+            </a>
+        </div>
+    </div>
+    <div class="middle"  class="safetyalert-p">依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<a class="safetyalert-p2"
+                            href="#">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</span>
+                </div>
+            </div>
+            <div class="car">
+                <div class="carbox bx">
+                    <div class="interface">
+                        <div class="warning">
+                            <i class="warning-i"></i><span class="warning-p">京东不会以任何理由要求您转账汇款，谨防诈骗。</span>
+                        </div>
+                        <div class="sign">
+                            <a class="sign-l" href="#">账户登录</a>
+                            <a class="sign-r" href="#">用户注册</a>
+                        </div>
+                        <div class="register">
+                            <span class="register-p1">用户名：
+                                <input class="input1" type="text" placeholder="请输入正确的用户名">
+                                <i class="iconfont yz1">&#xe56f;</i>
+                                <i class="iconfont yz2">&#xe61a;</i>
+                            </span>
+                            <span class="register-p1">密 &nbsp;&nbsp;&nbsp;码：
+                                <input class="input2" type="password" placeholder="请输入密码">
+                                <i class="iconfont yz3">&#xe56f;</i>
+                                <i class="iconfont yz4">&#xe61a;</i>
+                            </span>
+                            <span class="register-p1">手机号：
+                                <input class="input3" type="text" placeholder="请输入正确的手机号">
+                                <i class="iconfont yz5">&#xe56f;</i>
+                                <i class="iconfont yz6">&#xe61a;</i>
+                            </span>
+                            <span class="register-p1">邮 &nbsp;&nbsp;&nbsp;箱：
+                                <input class="input4" type="text" placeholder="请输入正确的邮箱">
+                                <i class="iconfont yz7">&#xe56f;</i>
+                                <i class="iconfont yz8">&#xe61a;</i>
+                            </span>
+                            <span class="register-p2">
+                                <div id="mpanel3" style="margin-top: 20px">
+                                </div>
+
+                                <button type="button" id="check-btn2" class="verify-btn">注册</button>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $('#mpanel3').codeVerify({
+            type: 2,
+            figure: 100, //位数，仅在type=2时生效
+            arith: 0, //算法，支持加减乘，不填为随机，仅在type=2时生效
+            fontSize: '15px',
+            btnId: 'check-btn2',
+            ready: function () { },
+            success: function () {
+                alert('验证匹配！');
+            },
+            error: function () {
+                alert('验证码不匹配！');
+            }
+        });
+    </script>
+    <script>
+        $(".submit-btn").click(function() {
+            $.ajax({
+                url: "http://192.168.1.104/users/register",
+                type: "post",
+                data: {
+                    username: $(".input1").val(),
+                    password: $(".input2").val(),
+                    phone: $(".input3").val(),
+                    email: $(".input4").val()
+                },
+                success: function(data) {
+                    console.log(data);
+                    if (data.state === 0) {
+                        setTimeout(function () {
+                            location.href = "JD注册.html";
+                        }, 1000);
+                    }
+                },
+                error: function() {
+                    alert('验证失败！');
+                }
+            })
+        })
+
+    </script>
+    <script>
+        
+        $(function () {
+            $("input1").blur(function () {
+                var zh = /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/;
+                if ($(this).val() == "") {
+                    $(".yz1").removeClass("on");
+                    $(".yz2").addClass("on");
+                    $("input1").attr("placeholder", "用户名不能为空" );
+                } else if (!zh.test($(this).val())) {
+                    $(".yz1").removeClass("on");
+                    $(".yz2").addClass("on");
+                } else {
+                    $(".yz2").removeClass("on");
+                    $(".yz1").addClass("on");
+                }
+            })
+        })
+        $(function () {
+            $(".input2").blur(function () {
+                var mm = /^[a-zA-Z0-6]\w{5,17}$/;
+                if ($(this).val() == "") {
+                    $(".yz3").removeClass("on");
+                    $(".yz4").addClass("on");
+                    $(".input2").attr("placeholder", "密码不能为空" );
+                } else if (!mm.test($(this).val())) {
+                    $(".yz3").removeClass("on");
+                    $(".yz4").addClass("on");
+                } else {
+                    $(".yz4").removeClass("on");
+                    $(".yz3").addClass("on");
+                }
+            })
+        })
+        $(function () {
+            $(".input3").blur(function () {
+                var dh = /^1[3456789]\d{9}$/;
+                if ($(this).val() == "") {
+                    $(".yz5").removeClass("on");
+                    $(".yz6").addClass("on");
+                    $(".input3").attr("placeholder", "号码不能为空" );
+                } else if (!dh.test($(this).val())) {
+                    $(".yz5").removeClass("on");
+                    $(".yz6").addClass("on");
+                } else {
+                    $(".yz6").removeClass("on");
+                    $(".yz5").addClass("on");
+                }
+            })
+        })
+        $(function () {
+            $(".input4").blur(function () {
+                var dh = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                if ($(this).val() == "") {
+                    $(".yz7").removeClass("on");
+                    $(".yz8").addClass("on");
+                    $(".input4").attr("placeholder", "邮箱不能为空" );
+                } else if (!dh.test($(this).val())) {
+                    $(".yz7").removeClass("on");
+                    $(".yz8").addClass("on");
+                } else {
+                    $(".yz8").removeClass("on");
+                    $(".yz7").addClass("on");
+                }
+            })
+        })
+
+    </script>
+</body>
+
+</html>

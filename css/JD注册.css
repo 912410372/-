@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+}
+a {
+    text-decoration: none;
+}
+.bx {
+    width: 990px;
+    margin: auto;
+}
+.top {
+    width: 100%;
+    height: 80px;
+}
+.topbox {
+    position: relative;
+}
+.top-logo {
+    float: left;
+    width: 300px;
+    height: 60px;
+    position: relative;
+    margin: 10px 0px 10px 0px;
+}
+.top-span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 110px;
+    height: 40px;
+    float: right;
+    background-image: url(../img/欢迎登陆.png);
+}
+.redmi {
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    margin: 2px 5px 0px 5px;
+    background-image: url(../img/红色信息.png);
+    overflow: hidden;
+}
+.top-a {
+    height: 17.6px;
+    position: absolute;
+    top: 52px;
+    right: 0px;
+    display: flex;
+    color: #999;
+    text-indent: 25px;
+}
+.top-a:hover {
+    color: #E4393C;
+    text-decoration: underline;
+}
+.middle {
+    width: 100%;
+}
+.safetyalert {
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.safetyalert-box {
+    width: 90%;
+    margin: auto;
+}
+.safetyalert-i {
+    background: url(../img/感叹号.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.safetyalert-p {
+    font-size: 12px;
+    color: #999;
+    vertical-align: middle;
+}
+.safetyalert-p2 {
+    color: #333;
+}
+.safetyalert-p2:hover {
+    text-decoration: underline;
+}
+.car {
+    width: 100%;
+    height: 475px;
+    background: #963af7;
+}
+.carbox {
+    height: 475px;
+    background-image: url(../img/car.jpg);
+}
+.interface {
+    width: 400px;
+    float: right;
+    background: #fff;
+    overflow: visible;
+    margin-top: 10px;
+}
+.warning {
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.warning-i {
+    background: url(../img/感叹号.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.warning-p {
+    vertical-align: middle;
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+}
+.sign {
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid #f4f4f4;
+    font-size: 18px;
+    font-family: "microsoft yahei";
+    text-align: center;
+    line-height: 54px;
+}
+.sign-l {
+    display: block;
+    width: 173px;
+    height: 54px;
+    float: left;
+    color: #666;
+}
+.sign-r {
+    display: block;
+    width: 173px;
+    height: 54px;
+    float: right;
+    font-weight: 700;
+    color: #e4393c;
+}
+.input1 {
+    padding-left: 10px;
+    background: #F4F4F7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    width: 70%;
+    height: 30px;
+    float: right;
+    margin-right: 13px;
+}
+.input2 {
+    padding-left: 10px;
+    background: #F4F4F7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    width: 70%;
+    height: 30px;
+    float: right;
+    margin-right: 13px;
+}
+.input3 {
+    padding-left: 10px;
+    background: #F4F4F7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    width: 70%;
+    height: 30px;
+    float: right;
+    margin-right: 13px;
+}
+.input4 {
+    padding-left: 10px;
+    background: #F4F4F7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    width: 70%;
+    height: 30px;
+    float: right;
+    margin-right: 13px;
+}
+.register {
+    font-size: 15px;
+}
+.register-p1 {
+    line-height: 31px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    position: relative;
+}
+.iconfont{
+    position: absolute;
+    right: 30px;
+    font-size: 20px;
+    opacity: 0;
+    user-select: none;
+}
+.iconfont:nth-child(2n-1){
+    color: red;
+}
+.iconfont:nth-child(2n){
+    color: rgb(32, 206, 32);
+}
+.on {
+    opacity: 1;
+}
+.zhuce {
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    margin: auto;
+    cursor: pointer;
+}
+.register-p2 {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 160px;
+}
+.cerify-code-panel {
+    height: 50px;
+}
+.verify-code {
+    width: 110px;
+    line-height: 30px;
+    height: 30px;
+    float: right;
+    margin-right: 10px;
+}
+.verify-change-area {
+    cursor: pointer;
+}
+.varify-input-code {
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    background: #F4F4F7;
+    width: 130px;
+    height: 30px;
+    float: left;
+    margin-left: 55px;
+    border-radius: 5px;
+}
+.verify-change-code {
+    float: right;
+    margin-right: 30px;
+}
+#check-btn2 {
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f99;
+    border-color: #f99;
+}
+.input1:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.input2:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.input3:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.input4:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.varify-input-code:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}

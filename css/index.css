@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.bx {
+    width: 1200px;
+    margin: auto;
+}
+body {
+    position: relative;
+}
+.top {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 107px;
+    background-color: #ffffff;
+    border-bottom: 4px solid #ed435b;
+}
+.top-box {
+    height: 105px;
+}
+.top-box-a {
+    float: left;
+    display: block;
+    width: 180px;
+    height: 63px;
+    margin: 21px 0 21px 0;
+    background: url(../img/拼多多logo.png);
+    background-size: 100%;
+}
+.top-box-ul {
+    position: absolute;
+    top: 44px;
+    left: 580px;
+    display: flex;
+    height: 30px;
+    line-height: 20px;
+    font-size: 18px;
+    color: #6c6c6c;
+    text-align: left;
+}
+.top-box-li,.top-box-li1 {
+    float: left;
+    border-right: 1px solid #6c6c6c;
+}
+.top-box-li {
+    display: block;
+    width: 52px;
+    height: 20px;
+}
+.top-box-li1 {
+    text-align: center;
+    display: block;
+    width: 103px;
+    height: 20px;
+}
+.top-box-li2 {
+    text-align: right;
+    display: block;
+    width: 87px;
+    height: 20px;
+}
+.top-box-red {
+    color: #ffffff;
+    height: 44px;
+    background-color: #ed445b;
+}
+.top-box-red-bx {
+    width: 1200px;
+    margin: auto;
+}
+.top-box-red-bx li {
+    cursor: pointer;
+    padding: 0 18px;
+    font-size: 18px;
+    float: left;
+    line-height: 44px;
+}
+#carousel-example-generic {
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    margin-top: 170px;
+}
+.contentBox .item {
+    width: 1000px;
+    height: 400px;
+}
+.item img {
+    width: 100%;
+    height: 100% !important;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>蚂蚁部落</title>
+<script type="text/javascript">
+window.onload=function() {
+  var odiv = document.getElementById("antzone");
+  var obt = document.getElementById("bt");
+  var ojt = document.getElementById("jt");
+  var count = 0;
+  obt.onclick = function () {
+    count = count + 1;
+    odiv.innerHTML = count;
+  }
+  ojt.onclick = function () {
+    count = count - 1;
+    odiv.innerHTML = count;
+  }
+}
+</script>
+</head>
+<body>
+<div id="antzone">0</div>
+<input type="button" id="bt" value="查看效果"/>
+<input type="button" id="jt" value="查看效果"/>
+</body>
+</html>

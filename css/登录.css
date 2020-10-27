@@ -1,0 +1,113 @@
+  * {
+    margin: 0;
+    padding: 0;
+}
+.big {
+    width: 100%;
+    height: 750px;
+    background-image: url(../img/科技背景.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.middle {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    background: #D0D0D0 ;
+    /* opacity: 0.7; */
+    top: 20%;
+    left: 34%;
+}
+.middle-p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: red;
+    padding-top: 10px;
+}
+.box1 {
+    line-height: 80px;
+    margin-top: 10px;
+    font-size: 20px;
+    width: 500px;
+    height: 80px;
+    text-align: center;
+}
+.input1 {
+    outline: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+}
+.input1:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.input2 {
+    outline: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 0;
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+}
+.input2:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.register-p2 {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 160px;
+}
+.cerify-code-panel {
+    height: 50px;
+}
+.verify-code {
+    width: 110px;
+    line-height: 30px;
+    height: 30px;
+    float: right;
+    margin-right: 10px;
+}
+.verify-change-area {
+    cursor: pointer;
+}
+.varify-input-code {
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    background: #F4F4F7;
+    width: 130px;
+    height: 30px;
+    float: left;
+    margin-left: 115px;
+    border-radius: 5px;
+}
+.verify-change-code {
+    float: right;
+    margin-right: 55px;
+}
+#check-btn2 {
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #f99;
+    border-color: #f99;
+}
+.varify-input-code:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
